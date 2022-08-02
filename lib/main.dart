@@ -1,3 +1,4 @@
+import 'package:expances_tracker/page/test.dart';
 import 'package:expances_tracker/page/view/CreateAccount/create_account.dart';
 import 'package:expances_tracker/page/view/Home/home_page.dart';
 import 'package:expances_tracker/page/view/LogIN/log_in_page.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
         CreateAccount.routeName:(context)=>CreateAccount(),
         HomePage.routeName:(context)=>HomePage(),
         AddExpenses.routeName:(context)=>AddExpenses(),
-        AddIncome.routeName:(context)=>AddIncome(),
+        AddIncome.routeName:(context)=>AddIncome()
 
       },
     );

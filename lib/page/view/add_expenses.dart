@@ -1,4 +1,5 @@
 import 'package:expances_tracker/model/user_model.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +16,8 @@ class AddExpenses extends StatefulWidget {
 
 class _AddExpensesState extends State<AddExpenses> {
   final _MoneyTextFieldController=TextEditingController();
+
+
 
   @override
   void dispose() {
@@ -140,7 +143,8 @@ class _AddExpensesState extends State<AddExpenses> {
                                     String catagory=provider.dropdownExvalue;
                                     String money= _MoneyTextFieldController.text;
                                     String date=provider.date;
-                                    provider.addexpenses(catagory,money , date);
+                                    provider.addexpenses(catagory,money ,date);
+
                                     Navigator.pop(context);
                                   }, child: Text("Save",style: TextStyle(color: Colors.white),)),
                                 ],
